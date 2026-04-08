@@ -40,6 +40,28 @@ Systems thinking is the connective tissue between Shravan's projects. Without it
 
 In the MPM curriculum, systems thinking is the capstone. Shravan reveals in Week 7 that the entire 7 weeks of teaching -- problem solving, design thinking, analytics, growth, roadmaps -- was system dynamics in disguise. Each topic was a subsystem. His core teaching: "A good system is self-preparing, self-evolving, self-purpose-seeking." He introduces micro loops (small feedback cycles between adjacent teams like product-tech or sales-operations) and macro loops (the larger feedback cycle where these subsystems reinforce each other). Culture itself, he teaches, is a product of loops forming within a company. See [[system-dynamics-for-pms]] for the full cohort teaching on this topic.
 
+### Systems Thinking and the PM Compute Gap
+
+One of the most original frameworks in Shravan's teaching arsenal is the [[pm-compute-gap]] -- his explanation for why some product teams succeed spectacularly while others collapse despite ample talent and funding. The framework draws two curves: one representing system complexity growing exponentially as a company scales, and a second representing the product manager's cognitive capacity to comprehend that complexity. When the complexity curve outpaces the PM's "compute" curve, the widening gap between them is where chaos lives. Product teams say "we didn't understand the market" or "we couldn't find product-market fit," but the root cause is that nobody responsible for the system's direction had enough structural understanding to perceive the variables that growth introduced.
+
+This is a direct application of systems thinking to career development. Shravan uses the PM Compute Gap to explain why companies like Google and Netflix pay extraordinary compensation to product managers -- they need to ensure the person responsible for system-level decisions has enough cognitive capacity for the complexity of their products. He references Reed Hastings' two tenets from "No Rules Rules" -- insanely high talent density and radical candor -- as the cultural expression of closing this gap. The framework also explains why the MPM cohort is deliberately intensive: five-hour sessions, case studies with no clear answers, forcing second-order thinking. He is not teaching content. He is expanding compute, so that when graduates encounter complex systems, the gap between their understanding and the system's actual complexity remains manageable.
+
+The concept connects powerfully to unsustainable growth. When venture capital floods a startup and it scales rapidly, processes break not because the people are incompetent but because their collective compute never caught up with the complexity that rapid scaling introduced. Growth without a corresponding increase in understanding acts, in Shravan's metaphor, like cancer -- the nodes in the system are interacting in ways nobody can track.
+
+### Systems Thinking Across the Project Portfolio
+
+The clearest evidence of systems thinking in practice is how Shravan's concurrent projects form a coherent portfolio rather than scattered bets. [[prabhupada-ai]] generates RAG architecture learnings that feed chapters in the [[builders-bible]], which provides workshop material for [[the-swagwala-pm]], which drives discovery for [[rethink-systems]] cohort applications. [[predict-my-layoff]] produced distribution and virality learnings -- the four-hook engagement model (fear, debate, solidarity, brag), the log-odds scoring architecture, the autoresearch pipeline -- that directly feed growth strategy thinking in the cohort curriculum. [[shipstack]] provides the knowledge infrastructure that makes every Claude Code session compound: lessons learned building PrabhupadaAI's three-tier answer resolution are captured in the vault and available to every subsequent project.
+
+The shared infrastructure pattern is itself a systems thinking artifact. PrabhupadaAI and the OpenClaw content engine share Railway deployment patterns. Predict My Layoff and the Rethink Dashboard share a Supabase instance with separate tables. The Builder's Bible build pipeline was reused to produce the Systems Bible. ElevenLabs voice synthesis is shared between PrabhupadaAI (Prabhupada's voice) and ShortStack (Shravan's voice clone). Each shared resource reduces the marginal cost of the next project while increasing the depth of understanding in that domain.
+
+Even the [[content-flywheel]] -- the strategic engine behind running five to eight projects simultaneously -- is a systems thinking construct. Building generates hard-won knowledge, which the vault captures as reusable patterns, which become teaching material, which gets distributed through the SwagWalaPM brand, which builds credibility that attracts collaborators and feedback, which makes the next round of building faster and better. The flywheel is not a metaphor. It is a literal feedback loop where the output of each node becomes the input of the next, and the system accelerates with every cycle.
+
+### Commander's Intent as Systems Navigation
+
+Shravan's teaching of [[commanders-intent]] in Week 1 of every cohort is fundamentally a systems thinking lesson disguised as a leadership framework. The military principle that no plan survives contact with the enemy is, at its core, an acknowledgment that battlefields are complex adaptive systems where emergent behaviors make detailed plans irrelevant. The response is not to plan more but to communicate intent at a level of abstraction that survives the system's unpredictability. Soldiers who understand the intent can improvise when their specific plan falls apart, because they are navigating by the system's direction vector rather than by its moment-to-moment state.
+
+Applied to product management, this becomes the argument for agile over waterfall: complex markets are systems with too many interacting variables for any upfront plan to survive. The NVIDIA story Shravan uses as illustration -- Jensen Huang holding the intent of "reduce the cost of compute" for twenty-five years while every short-term plan changed constantly -- is a case study in systems thinking applied to business strategy. The short-term plans were wrong, sometimes catastrophically. Three times the company nearly could not make payroll. But the intent was aligned with the direction of technological complexity, and when OpenAI needed cheap compute in 2017, NVIDIA was the only company whose system-level positioning matched the moment.
+
 ## Related
 - [[building-philosophy]]
 - [[shravan-tickoo]]
@@ -48,3 +70,7 @@ In the MPM curriculum, systems thinking is the capstone. Shravan reveals in Week
 - [[growth-loops-and-defensible-growth]]
 - [[pm-compute-gap]]
 - [[commanders-intent]]
+- [[content-flywheel]]
+- [[predict-my-layoff]]
+- [[prabhupada-ai]]
+- [[shipstack]]

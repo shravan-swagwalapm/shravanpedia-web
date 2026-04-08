@@ -7,6 +7,7 @@ export interface ArticleFrontmatter {
   tags?: string[];
   visibility?: "public" | "private";
   featured?: boolean;
+  infobox?: Record<string, string>;
 }
 
 export interface Article {

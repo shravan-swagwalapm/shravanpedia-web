@@ -52,9 +52,37 @@ Shravan repeatedly shares one cautionary tale: "Quibi Is What Happens When Holly
 
 Shravan's growth philosophy shapes everything he builds. [[rethink-systems]] does not run ads -- it grows through content, community, and results. [[the-swagwala-pm]] became the largest individual PM channel in India through consistency, not virality. The lesson he teaches his students and lives himself: distribution is not a launch-day activity, it is a daily practice that compounds. "Please be responsible and be objective in the face of adversity -- one of the few traits of a PM not spoken of, and yet the most important one."
 
+### The 190M Impressions Story: LinkedIn as a Distribution System
+
+By April 2026, Shravan's LinkedIn account had crossed 199K followers with over 190 million impressions per year -- a number that Favikon ranked as the best Product Management creator in India and third worldwide. But the story behind that number is not a viral moment or a growth hack. It is a systems story that started in April 2020, when Shravan began posting daily. The compound effect of showing up every single day for six years, without shortcuts, without a social media team, without paid promotion, produced a distribution asset that money cannot replicate.
+
+The LinkedIn strategy is specific and deliberate. Shravan receives 50-60 DMs daily, of which approximately 45 are templated requests -- "review my resume," "become my mentor," "refer me." He responds to none of those. What he responds to is someone who demonstrates that they have done their homework: "I saw this video of yours. On the 22nd minute, you talked about this principle. I have a contextual question." This filtering mechanism is itself a growth strategy -- it trains his audience to engage deeply rather than superficially, which produces higher-quality interactions that LinkedIn's algorithm rewards with more distribution. The content that performs best is not motivational posts but curated reading lists and case study breakdowns -- the kind of content that gets bookmarked, shared, and re-posted, compounding reach with every cycle.
+
+He teaches this exact strategy in the MPM cohort through [[personal-branding-for-pms]]. If he likes a student's LinkedIn post, 50 more people see it. Those 50 impressions are free distribution the student could not buy. Over 20 weeks of consistent writing, even twice a week, the cumulative effect becomes visible. He cites former students like Kevin, Ashu, and Tushar who started writing during their cohort and saw tangible career results. The math is explicit: building distribution is not optional for modern PMs. "Resumes don't work anymore. You have to build multiple pathways. One might work."
+
+The 190 million impressions are not a vanity metric. They are the top of the funnel for [[rethink-systems]], which receives 350+ applications per cohort with a sub-10% acceptance rate and zero customer acquisition cost. The LinkedIn following is the distribution engine that powers a $1M+ education business with zero marketing spend -- the cleanest possible proof that content-as-distribution works when the content is genuinely useful.
+
+### Growth Loops vs. Funnels: The Cohort Teaching
+
+In the MPM curriculum, Shravan dedicates significant time to dismantling the AARRR funnel model that dominates PM education. His argument, detailed in [[growth-loops-and-defensible-growth]], is that AARRR is a useful taxonomy but a dangerous strategy -- it is linear, non-compounding, and has an inefficient cost of distribution over time. Growth loops, by contrast, compound. A referral program driven by external rewards is not a loop. Loops are about gaining users organically, by design.
+
+His canonical example is Quora: you search for an answer, you find value, you write an answer, someone else searches for your answer -- the two actions (consuming and creating) form a self-reinforcing cycle. LinkedIn operates similarly: reading content inspires writing content, which inspires reading, and the social capital earned from engagement provides intrinsic motivation to continue. His most original teaching moment is the LinkedIn indexing question: why does LinkedIn index profiles on Google but not content? The answer reveals deep alignment between acquisition strategy, monetization model, and platform dynamics -- LinkedIn indexes profiles as an acquisition hook but keeps content behind login because their ad revenue depends on time spent inside the platform.
+
+He extends loops to organizational culture with a characteristically sharp observation: toxic workplaces are also loops. A bad actor influences a node, that node influences another, and eventually every new hire falls into the same behavioral structure. Amazon has a driven culture because the loop reinforces that behavior. Microsoft has a calmer culture because its loops reinforce that instead. Culture builds because of loops forming within the company. See [[system-dynamics-for-pms]] for how this connects to his broader systems teaching.
+
+### Predict My Layoff: Growth Philosophy in Practice
+
+[[predict-my-layoff]] is the most direct application of Shravan's growth philosophy in a shipped product. Every design decision in the app was made with distribution as a first-class concern, not an afterthought. The four-hook engagement model -- fear (scores 70+), debate (45-69), solidarity (25-44), and brag (under 25) -- generates different pre-written LinkedIn sharing text optimized for each emotional pattern. The "debate" hook for moderate risk may be the most viral, because it includes both a scary statistic (company ranking) and a reassuring one (department safety), which triggers discussion rather than passive sharing.
+
+The methodology page deliberately publishes all scoring weights transparently -- the formula itself becomes viral content, because transparency builds trust and generates LinkedIn discussion. The 78% accuracy statistic, which was buried at line 700 in the original design where nobody would see it, was moved to position two in the Trust Bar -- the single highest-leverage change to the landing page. The autoresearch pipeline that grew the company database from 22 to 1,640 entries followed a Karpathy-inspired pattern of living documents, metrics scripts, and validation checks. Every element of the product is designed to create and amplify its own distribution, validating Shravan's core growth conviction: distribution is not a marketing function, it is a product decision.
+
 ## Related
 - [[shravan-tickoo]]
 - [[content-flywheel]]
 - [[predict-my-layoff]]
 - [[rethink-systems]]
 - [[career-and-hiring-views]]
+- [[personal-branding-for-pms]]
+- [[growth-loops-and-defensible-growth]]
+- [[system-dynamics-for-pms]]
+- [[the-swagwala-pm]]

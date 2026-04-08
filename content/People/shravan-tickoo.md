@@ -7,6 +7,18 @@ source: "accumulated context from Claude Code sessions, vault, resume, LinkedIn 
 tags: [self, founder, pm, teacher, angel-investor, iit-roorkee]
 visibility: public
 featured: true
+infobox:
+  Born: "February 28, 1993 (age 33), Jammu, India"
+  Nationality: Indian
+  Education: "IIT Roorkee (2011-2015)"
+  Occupation: "Founder, Product Manager, Educator, Angel Investor"
+  Known for: "@TheSwagWalaPM, Rethink Systems, Builder's Bible"
+  Company: "Rethink Systems (Naum Infinitium Pvt Ltd)"
+  YouTube: "@TheSwagWalaPM (45K+ subs)"
+  LinkedIn: "199K+ followers"
+  Website: "rethinksystems.in"
+  Investments: "20+ startups across 5 countries"
+  Students mentored: "10,000+"
 ---
 
 > Founder, product manager, teacher, angel investor, and builder — the person this wiki exists for.

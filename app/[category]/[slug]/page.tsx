@@ -65,24 +65,32 @@ export default async function ArticlePage({ params }: PageProps) {
     }
   }
 
-  // Build infobox data from frontmatter
+  // Build infobox: use custom infobox from frontmatter if available, else generic
   const infoboxRows: Array<{ label: string; value: string }> = [];
-  if (article.frontmatter.category) {
-    infoboxRows.push({ label: "Category", value: article.frontmatter.category });
+  if (article.frontmatter.infobox) {
+    // Custom infobox — biographical/project-specific fields
+    for (const [key, value] of Object.entries(article.frontmatter.infobox)) {
+      if (value) infoboxRows.push({ label: key, value: String(value) });
+    }
+  } else {
+    // Fallback: generic metadata
+    if (article.frontmatter.category) {
+      infoboxRows.push({ label: "Category", value: article.frontmatter.category });
+    }
+    if (article.frontmatter.created) {
+      infoboxRows.push({ label: "Created", value: article.frontmatter.created });
+    }
+    if (article.frontmatter.updated) {
+      infoboxRows.push({ label: "Updated", value: article.frontmatter.updated });
+    }
+    if (article.frontmatter.tags && article.frontmatter.tags.length > 0) {
+      infoboxRows.push({ label: "Tags", value: article.frontmatter.tags.join(", ") });
+    }
   }
-  if (article.frontmatter.created) {
-    infoboxRows.push({ label: "Created", value: article.frontmatter.created });
+  infoboxRows.push({ label: "Reading time", value: `${article.readingTime} min read` });
+  if (backlinks.length > 0) {
+    infoboxRows.push({ label: "Linked from", value: `${backlinks.length} article${backlinks.length !== 1 ? "s" : ""}` });
   }
-  if (article.frontmatter.updated) {
-    infoboxRows.push({ label: "Updated", value: article.frontmatter.updated });
-  }
-  if (article.frontmatter.tags && article.frontmatter.tags.length > 0) {
-    infoboxRows.push({ label: "Tags", value: article.frontmatter.tags.join(", ") });
-  }
-  if (article.frontmatter.source) {
-    infoboxRows.push({ label: "Source", value: article.frontmatter.source });
-  }
-  infoboxRows.push({ label: "Reading", value: `${article.readingTime} min` });
 
   // Extract related articles
   const relatedSection = article.content.match(
@@ -155,14 +163,6 @@ export default async function ArticlePage({ params }: PageProps) {
               <div className="wiki-infobox-value">{row.value}</div>
             </div>
           ))}
-          {backlinks.length > 0 && (
-            <div className="wiki-infobox-row">
-              <div className="wiki-infobox-label">Linked from</div>
-              <div className="wiki-infobox-value">
-                {backlinks.length} article{backlinks.length !== 1 ? "s" : ""}
-              </div>
-            </div>
-          )}
         </div>
 
         {/* Summary */}

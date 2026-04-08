@@ -50,9 +50,31 @@ In his 2023 recap, Shravan noted: "Invested in 4+ startups of which 1 is at Seri
 
 "Most good product people are systems thinkers where they believe — it's not the person who is wrong and it's the system that is and they make efforts to change that." Applied to startups, the lesson is clear: do not build around heroes, build systems that make average people excellent. "You change the system, you change the node's behavior."
 
+### The Arizona App: The First Entrepreneurial Venture
+
+Before Flipkart, before the PM career, before any formal product training, Shravan built a location-tracking app similar to Waze during his time at IIT Roorkee, circa 2014-2015. The app went viral in Arizona without any marketing spend. This was his first taste of building something that people actually used at scale, and the fact that it spread organically, in a foreign market he had no connection to, with zero promotion, validated the instinct that would later define everything: build something genuinely useful, and the audience finds you. The Arizona app predates his formal entry into product management, making it the earliest evidence of the [[content-flywheel]] principle -- that value creates its own distribution. It was also proof to himself that he could build, not just manage. When he later founded [[rethink-systems]] with the conviction that PMs should be "founder material," the Arizona app was the lived experience behind that belief.
+
+### The Founding of Rethink Systems: From WhatsApp Group to $1M+ Revenue
+
+The Rethink Systems origin story is not a founding myth polished for LinkedIn. It is a series of unglamorous steps that only make sense in retrospect. After nine years as a product operator at Flipkart, BlackBuck (where he won Employee of the Year), Magicbricks, Edureka (Star Performer), BYJU'S (Principal PM), and Bhanzu (Director of Product), Shravan launched [[the-swagwala-pm]] YouTube channel in July 2021 during his BYJU'S years. The channel was not a business plan -- it was teaching for the love of teaching, in Hinglish, making PM content accessible to people who could not afford expensive certifications.
+
+What started as YouTube evolved into a WhatsApp community called "Art & Product Musings," which scaled to 3,000+ active members in two months with 100+ people writing daily. The community was the proving ground. When enough people asked for structured learning, the first MPM cohort launched in late 2023 with 52 students. The company was registered as Naum Infinitium Private Limited in February 2024, headquartered in Bengaluru. It was profitable from day one: the first cohort generated $150K+ with zero customer acquisition cost, entirely from organic community. By Cohort 3 in 2024, enrollment had reached 80 students with 10-16+ years average experience, a 91+ NPS, and an Instructor NPS of 100. By Cohort 7 in January 2026, the community had grown to 400+ operators with 150+ career transitions, and 350+ applications came in with 30% of the batch already closed at soft launch.
+
+Shravan names his early bosses and mentors who made this trajectory possible: Ravi Karthik taught him empathy and patience, Indraneel Bommisetty taught him creativity, and Lovleen Bhatia taught him how to face adversity. The Young India Fellowship through Ashoka University and University of Pennsylvania (less than 2% acceptance rate) was another formative inflection point. His gratitude always goes last to "my Mahadev, whose servant I am." The registered company name, Naum Infinitium, translates loosely to "infinite name" -- a quiet spiritual reference that sits beneath a business built on very concrete, very unglamorous daily execution.
+
+### The Uber Bug Bounty: Builder Instinct Before the Title
+
+One of the lesser-known chapters in Shravan's entrepreneurial identity is the Uber Bug Bounty, which earned him a $3,000 reward for identifying a data vulnerability. This incident predates his formal entrepreneurial ventures but reveals the same instinct: he does not look away from broken systems. He probes, documents, and reports. The behavior is identical whether the system is a broken Uber API, a broken startup interview process (the 100% hike story), or a broken PM education ecosystem ([[rethink-systems]]). The common thread is that founders see problems where others see inconveniences, and they act on what they see rather than complaining about it.
+
+### The Education Business as a Startup Model
+
+What makes Rethink Systems unusual as a startup is that it inverts almost every conventional startup playbook. There is no venture capital -- growth is entirely organic. There is no paid marketing -- 190 million annual LinkedIn impressions come from six years of daily posting. There is no scalable technology platform as the primary product -- the product is Shravan himself, teaching live for five hours per session, with a hard cap of 25 students per cohort group because "you cannot get quality education in any cohort greater than 25 people." The scaling strategy is a gurukul-inspired model: develop 50 mentors who each train 20 educators. Scale through people, not class size.
+
+This is the antithesis of the edtech model that Shravan saw firsthand at BYJU'S and Bhanzu -- massive scale, massive spend, massive churn. Rethink Systems' model is expensive per unit but generates zero churn and organic growth. The alumni network -- 400+ operators from Google, Microsoft, Meta, Swiggy, 1mg, Meesho, Mastercard, Barclays, and more -- is itself a distribution channel where alumni mentor, hire, and open doors for each other. The community is not a byproduct of the business. It is the business, and the fact that it was community-first from the WhatsApp group stage is what makes it defensible in ways that content-first edtech companies are not.
+
 ## Impact
 
-Rethink Systems is the proof of concept. Built without funding, grown through content and community, scaled to India's premier PM program with a 100 Instructor NPS. The entrepreneurship philosophy is simple: build something you would want to exist, do the boring work daily, let the results compound. "It wasn't motivation that saved me. It was humility. Faith. And the refusal to quit."
+Rethink Systems is the proof of concept. Built without funding, grown through content and community, scaled to India's premier PM program with a 100 Instructor NPS and $1M+ in cumulative revenue. The Arizona app proved that building useful things creates its own distribution. The founding story proved that bootstrapping works when the product is genuinely transformative. The entrepreneurship philosophy is simple: build something you would want to exist, do the boring work daily, let the results compound. "It wasn't motivation that saved me. It was humility. Faith. And the refusal to quit."
 
 ## Related
 - [[shravan-tickoo]]
@@ -60,3 +82,7 @@ Rethink Systems is the proof of concept. Built without funding, grown through co
 - [[rethink-systems]]
 - [[building-philosophy]]
 - [[career-and-hiring-views]]
+- [[content-flywheel]]
+- [[the-swagwala-pm]]
+- [[personal-stories]]
+- [[life-philosophy]]

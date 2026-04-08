@@ -6,6 +6,14 @@ updated: 2026-04-09
 source: "vault project files, session history, session journals (4 sessions, March 2026)"
 tags: [project, rag, spiritual, prabhupada, product]
 visibility: public
+infobox:
+  Type: "RAG Web Application"
+  Status: "Active"
+  Stack: "FastAPI, Next.js, SQLite, FAISS"
+  Deploy: "Railway"
+  Voice: "ElevenLabs (Prabhupada synthesis)"
+  Purpose: "AI spiritual Q&A grounded in Prabhupada's teachings"
+  Significance: "Most personally meaningful project"
 ---
 
 > AI-powered spiritual Q&A grounded in Srila Prabhupada's teachings — the project with the deepest personal meaning.

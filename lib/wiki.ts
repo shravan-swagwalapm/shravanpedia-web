@@ -118,6 +118,7 @@ export async function getAllArticles(): Promise<Article[]> {
           tags: fm.tags ?? [],
           visibility: "public",
           featured: fm.featured,
+          infobox: fm.infobox as Record<string, string> | undefined,
         },
         content,
         slug: fileName,
