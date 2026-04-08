@@ -3,7 +3,7 @@ title: "The Three Superpowers"
 category: Learnings
 created: 2026-04-09
 updated: 2026-04-09
-source: "MPM Cohort transcripts, Week 1 Mindset Session"
+source: "MPM Cohort transcripts, Week 1 Mindset Session; MPM session notes PDF Week 1"
 tags: [frameworks, mindset, compassion, teaching, cohort-philosophy]
 visibility: public
 ---
@@ -21,6 +21,8 @@ Before a single word about product management is spoken in any MPM cohort, Shrav
 The first superpower is gratitude, but Shravan defines it operationally, not sentimentally. Gratitude in the cohort means: if you can help someone, you do not ask, you help. You take initiative. If a teammate has a family emergency, you pick up their work without being asked. The goal is to think as one entity, not as individuals competing for a score.
 
 Shravan frames this as a cultural principle, not a nicety. He explains that gratitude is the mechanism by which a community becomes multidirectional — students learn from every node in the network, not just from the instructor at the center. When past cohort members spontaneously congratulate incoming students, that is the ethos of gratitude in action. It is the behavior that transforms a paid program into a family, and he is unapologetic about claiming that distinction: "Today, this large community of operators has become family — not like family, but truly family."
+
+The session notes add a six-stage gratitude evolution framework that maps the journey of self-awareness: No Self in childhood (no self-identity, shaped by environment), Some Self (early achievements define identity — "I'm smart, I'm skilled"), Pride (arrogance sets in, learning stops), Failure (reality check — self-worth is questioned), Gratitude (realization that success was due to others' help), and No Self again at Enlightenment (doing things for joy, without ego). The accompanying quote crystallizes the progression: "The person who blames others is nowhere. The person who blames themselves is halfway there. The person who blames no one has arrived."
 
 ### Superpower Two: The Ability to Unlearn
 

@@ -3,7 +3,7 @@ title: "Design Philosophy"
 category: Learnings
 created: 2026-04-08
 updated: 2026-04-09
-source: "CLAUDE.md design vocab, session patterns, project aesthetics, LinkedIn posts (436 design/UX posts)"
+source: "CLAUDE.md design vocab, session patterns, project aesthetics, LinkedIn posts (436 design/UX posts); MPM session notes PDF Week 4"
 tags: [design, aesthetics, ui, ux, philosophy, product-thinking]
 visibility: public
 ---
@@ -43,6 +43,14 @@ His love of simulation games -- Age of Empires, strategy titles -- connects dire
 ### Anti-Patterns
 
 Generic gradients and rounded cards are AI slop. Every element rendered at the same size means no hierarchy. Tight spacing everywhere is suffocating, not dense -- there is a difference. Copy-pasted case studies with no unique insight are the design equivalent of content without context.
+
+### The Design Sprint as Taught in the Cohort
+
+The Week 4 session notes reveal that Shravan teaches a full five-day design sprint methodology adapted for PM teams, drawing on the Google Ventures sprint model but reframed through his own lens. Monday focuses on revisiting the product value template and using empathy maps to pinpoint the one or two most critical problem areas. Tuesday is for ideation using techniques like the "crazy eights" method — generating multiple sketches rapidly, favoring volume over polish. Wednesday is for collaborative evaluation through dot voting, speed critiques, or heat maps, with the PM or executive serving as the "decider" who breaks deadlocks. Thursday is prototype development with close designer-PM collaboration. Friday is beta testing with real users to gather feedback on whether the design meets the previously defined need. Shravan presents this not merely as a design methodology but as a "product sprint" that mirrors the iterative nature of real product development.
+
+He also teaches a progression in design fidelity — from hand sketches (fast, flexible, ideal for internal ideation), through wireframes (structure and layout without visual polish), to mockups and interactive prototypes that approach the final product. The key insight is the interactivity-fidelity matrix: as fidelity increases, designs become more polished but less flexible. The choice of fidelity level at each stage is itself a product decision. For digital tools, he recommends InVision for clickable prototypes and evaluates tools on pre-built assets, ease of sharing, and time efficiency. AI is positioned as a refinement assistant — useful for enhancing copy or streamlining layout ideas — but explicitly not a substitute for the creative, conceptual input of a human designer or PM. The narrative and strategic decisions must remain human-driven.
+
+A particularly notable exercise from the Week 4 notes involves students designing an app for "finding an ideal partner safely in a new city." Teams must articulate three sets of instructions separately: conceptual design (what elements should exist), information design (how information is structured on each screen), and interaction design (what happens when you touch each element). The exercise forces students to think in design layers before touching any tool, reinforcing that design articulation is a PM skill distinct from visual craft.
 
 ### Design System Approach
 

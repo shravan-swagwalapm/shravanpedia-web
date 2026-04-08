@@ -3,7 +3,7 @@ title: "The MPM Cohort Method — Weeks 5-8"
 category: Learnings
 created: 2026-04-09
 updated: 2026-04-09
-source: "MPM Cohort transcripts, Weeks 5-8"
+source: "MPM Cohort transcripts, Weeks 5-8; MPM session notes PDFs Weeks 1-7"
 tags: [mpm, cohort, teaching-method, case-studies, presentations, product-athon, mentoring]
 visibility: public
 ---
@@ -17,6 +17,10 @@ The transcripts from Weeks 5-8 of the MPM cohort reveal something that no market
 ## Details
 
 The eight-week structure follows a deliberate arc. Weeks 1-3 cover principles: where product management originated, problem solving (the golden circle, problem space vs solution space, importance vs satisfaction), and design thinking (first principles, conceptual/information/interaction/visual layers). Weeks 4-5 introduce analytics and experimentation. Week 6 covers roadmaps and prioritization. Week 7 introduces system dynamics as the capstone framework that retroactively explains why everything before it was taught. Week 8 focuses on interviews, personal branding, and preparation for the product-a-thon (the final team competition). Throughout, there are weekly guest speakers from industry and a parallel case study that teams work on continuously.
+
+The session notes reveal the full depth of the problem-solving curriculum in Week 3. Shravan teaches the Double Diamond Framework adapted for PMs: the problem space (Discover and Converge phases, driven by divergent thinking) and the solution space (Ideate and Deliver phases, driven by convergent thinking), with the explicit instruction to spend twenty-five percent of time in each quadrant. Students are taught to resist jumping to "How" without first answering "Why" through the Golden Circle (Why, What, How). The Known/Unknown Unknowns matrix provides a depth-of-thinking framework: Known Knowns (execute fast), Known Unknowns (requires exploration), Unknown Knowns (dangerous -- a solution looking for a problem), and Unknown Unknowns (discovery is weak, critical issues missed). The goal is to reduce unknown unknowns through deep user discovery. Students are also taught six key questions every PM must answer about any problem: What is the problem? Why is it important? Why do current solutions not work? What are the trade-offs? How will I measure success? What does "done" look like? If any of these are missing, the story is incomplete.
+
+The Week 6 notes add a referral philosophy that is characteristic of Shravan's accountability-first approach. "I only refer people who could get the job even without my referral." Referrals are framed as reputation transfers -- he only recommends those whose work ethic reflects his. Students earn access to his network (VPs, CPOs, startup founders) by demonstrating grit, consistency, leadership in teams, and depth in work. He is explicit: "Don't come after 8 weeks asking for referrals if you didn't show up during the program."
 
 The case study presentations are the heart of the program's learning model. Teams of 4-6 students receive a problem brief each week and present their solution in a 5-6 minute timed presentation the following week. By Week 6-7, the presentations have evolved into elaborate productions: teams create fictional podcasts (Joe Rogan interviewing Mark Zuckerberg and Elon Musk about deepfakes), Bollywood-inspired skits (Bhuvan Bawra meeting a content creator), news broadcasts (Palki Sharma covering the content creation industry), and comedy shows (India's Got Latent featuring a Bihar village character discussing legal tech). The creativity is not decoration -- it demonstrates that teams have internalized the problem deeply enough to explain it through storytelling.
 

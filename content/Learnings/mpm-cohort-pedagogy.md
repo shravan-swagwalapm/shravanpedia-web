@@ -46,6 +46,12 @@ Shravan designs case studies that are deliberately ambiguous. The YouTube long-f
 
 The pedagogy behind this is precise. If a case study has one right answer, students optimize for finding it. If it has no right answer, students are forced to develop judgment — the ability to weigh tradeoffs, argue for a position, and change their mind when evidence warrants it. This is the same skill they will need in real product roles, where the PM's job is not to be right but to make the best decision possible with incomplete information.
 
+### The Weekly Rhythm: Theory and Application
+
+The session notes reveal the precise weekly structure of the cohort. Saturdays are dedicated to theory sessions — deep learning through lecture, Socratic dialogue, and frameworks. Sundays are dedicated to case studies and breakout rooms, where teams apply the previous day's learning to real-world problems. The case study process follows a strict cadence: teams receive a real-world problem statement (such as solving UPI credit fraud or eliminating spam calls in India), work together in teams to analyze and propose solutions, present their findings in a timed three-to-five-minute pitch on Sundays, and the best teams receive external feedback from VCs, founders, and industry leaders. The goal is not passive learning but immediate application — what Shravan calls crossing the "mental threshold from observer to operator."
+
+The notes also reveal a deliberate five-day case study structure that teams are expected to follow between sessions. Days one and two are for discovery — diverging ideas and collecting insights. Day three is for prioritization — finalizing the problem and placing bets. Days four and five are for execution — implementing the chosen ideas with no going back to discovery after day two. This enforced discipline mirrors real product development cycles and teaches students that discovery paralysis is as dangerous as premature execution.
+
 ### The Mentor Manifesto
 
 Shravan codifies the mentoring philosophy in a document he reads to every cohort. The key distinction: a mentor is a guide, not a king. A guide gives direction; a king directs. Mentors do not tell students what decisions to make. They redirect students who wander outside the scope of a given week's focus. Their involvement is calibrated — some weeks they spend every day with the team; other weeks, two hours suffice. What matters is the success of the group they lead.

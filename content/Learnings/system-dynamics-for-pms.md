@@ -3,7 +3,7 @@ title: "System Dynamics for Product Managers"
 category: Learnings
 created: 2026-04-09
 updated: 2026-04-09
-source: "MPM Cohort transcripts, Weeks 5-8"
+source: "MPM Cohort transcripts, Weeks 5-8; MPM session notes PDF Week 7"
 tags: [systems, system-dynamics, complexity, first-principles, knowledge-model]
 visibility: public
 ---
@@ -29,6 +29,18 @@ The Adam 1 and Adam 2 framework, which he introduces in Week 5 Session 2 during 
 The phrase "appreciate complexity, then you will be able to build simple products" captures Shravan's core conviction about system dynamics and PM practice. Most people appreciate simplicity -- they want frameworks, checklists, templates. His counter-argument is that genuine simplicity only comes from deeply understanding the complexity beneath it. If you do not understand why a system behaves the way it does, you cannot simplify it without breaking something. This is why his curriculum spends seven weeks building foundational understanding before arriving at system dynamics: without that foundation, the concept of interacting subsystems would be abstract rather than experiential.
 
 He connects this directly to how students should approach product analysis. When he says "if you know that lens, you can break down any product," he means the system dynamics lens: identify the components, identify the nodes, understand how they interact, look for the loops (reinforcing and degenerative), and understand which properties are emergent. He acknowledges this is "not easy to do -- it is an art," which is a rare admission of difficulty from someone who typically frames things as achievable with discipline.
+
+### Spiral Dynamics and the Evolution of Mindsets
+
+The Week 7 session notes introduce Spiral Dynamics as a companion framework to systems thinking -- "if systems thinking is the operating system, spiral dynamics is the user manual of human behavior." Shravan teaches it as a theory of how individual and collective mindsets evolve over time, mapping eight levels from Survival ("Do I have food today?"), Security ("I need to feel safe"), Power ("I've made some money, let me flex"), Order ("I'm an SPM, I run a clean process"), Success ("I'm successful because I made it happen"), Community ("I made it here because of others, let me give back"), Integration ("Let me blend the needs of all stakeholders and move toward harmony"), to Holistic ("Everything is connected, I see the world as one large system"). The critical insight is that every level above sounds like gibberish to someone who has not yet evolved to it -- you cannot explain community mindset to someone stuck in the power mindset without being dismissed as naive. For PMs, this framework explains why some team members resist collaborative culture (they may be operating at the power or order level) and why culture change requires system-level interventions rather than individual persuasion.
+
+### The Seven-Point System Redesign Template
+
+Perhaps the most actionable framework from the Week 7 notes is the System Redesign Template, presented as a PM's tactical toolkit for fixing broken systems. The seven steps are: define the system purpose (what is this system supposed to do?), map the nodes (who are the people, tools, and infrastructure involved?), map the relationships (what incentives, workflows, rituals, and feedback loops connect them?), identify the broken feedback loops (where has the system stopped talking back?), assess whether behavior is systemic or personal (is the engineer slow because they are lazy, or because the PR review system creates bottlenecks?), design chaordic balance (the best systems balance chaos and order -- self-organizing, self-repairing, self-sustaining, and responsive to external shocks), and implement with the priority hierarchy: purpose first, relationships second, nodes last. The hierarchy is critical: even if a node changes (a team member quits), the system should still function if purpose and relationships are well-designed. Most PMs make the mistake of obsessing over individual nodes while ignoring purpose and relationships entirely.
+
+### Anti-Fragile Careers as Systems Design
+
+Shravan extends systems thinking into career strategy with the anti-fragile career framework. A fragile career relies on one skill (like being a Jira master), grows only within one organization, waits for promotions, and collapses with layoffs. An anti-fragile career builds a skill stack (writing, design, tech, AI), grows across networks, communities, and platforms, creates systems for learning and visibility, and gets stronger by adapting and reinventing. The insight is that if you think in systems, your career becomes a product and you become its PM. The most anti-fragile PMs build in public, teach what they learn, write consistently, and play long games with people.
 
 ## Impact
 

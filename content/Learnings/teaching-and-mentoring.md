@@ -3,7 +3,7 @@ title: "Teaching & Mentoring"
 category: Learnings
 created: 2026-04-08
 updated: 2026-04-09
-source: "LinkedIn data extract, rethinksystems.in (April 2026), Medium/Socialboat article, YouTube/podcast web research (April 2026), MPM Cohort transcripts Weeks 5-8"
+source: "LinkedIn data extract, rethinksystems.in (April 2026), Medium/Socialboat article, YouTube/podcast web research (April 2026), MPM Cohort transcripts Weeks 5-8, MPM session notes PDFs Weeks 1-7"
 tags: [teaching, mentoring, education, product-management, cohort]
 visibility: public
 ---
@@ -51,6 +51,14 @@ The curriculum blends Bhagavad Gita wisdom with modern product execution -- not 
 ### Cohort Size Philosophy
 
 Shravan holds a hard conviction on cohort sizing: "You cannot get quality education in any cohort greater than 25 people." The cap is non-negotiable, which creates a natural tension with growth ambitions. His solution is a **gurukul-inspired scaling model**: develop 50 mentors who each train 20 educators, scaling through people rather than class size. The quality stays high because the unit of scale is a trained human, not a larger classroom.
+
+### Notable Exercises and Teaching Methods from the Session Notes
+
+The MPM session notes reveal specific exercises that demonstrate the depth of Shravan's pedagogical design. In Week 3, the case study is a real national problem: eliminating unwanted spam calls and SMS in India with AI-powered smart call filtering. Six teams present creative solutions — Roco (AI-powered spam detection with a central spam registry and SIBIL-like scoring), Unnati Kavach (personalized spam firewall with dramatic skit-style storytelling), Kavach AI (spam call defense using Mahabharata characters Arjun and Draupadi), SpamDefender.ai (real-time AI bodyguard with telco integration), a voice and SMS filter using supervised learning and Gmail-style spam classification, and DTM with fraud insurance (emergency call record triggers and B2B telco alert systems). Shravan's feedback criteria reveal his evaluation priorities: he praises unique insights (recognizing that spam leads to fraud, not just annoyance), real user research (surveys and interviews conducted by students), storytelling energy, and UI prototyping using tools like Lovable.so and Replit. He critiques weak visual representation of the problem, excessive fun at the expense of the core message, crossing the strict five-minute time limit, and unclear solutions. The meta-lesson he draws is the concept of the "insight waterfall" — the moment when the interviewer or audience learns something from the presenter that they did not know before.
+
+In Week 5, the SatyaGPT case study on political misinformation in India produces six parallel team presentations. Teams present in formats ranging from standard pitches to Kaun Banega Crorepati-style game shows with characters and quiz statistics, to conversational desi family-style forward chains. The problem — India as the number one country in political misinformation spread, with 950 million internet users and 64 percent exposed to fake news — produces solutions spanning screenshot-based fact-checking, WhatsApp bot verification, on-device AI flagging, and notification-level verification systems. Shravan's feedback differentiates between teams: he names one team's skit presentation as "top 3 of the last three weeks" for its clear narrative and regional language support, while pushing another to go deeper on solution architecture rather than just naming technologies. He encourages the strongest team to "prototype an MVP by Week 8" and shift from idea to real product, embodying his conviction that the program should produce builders, not theorists.
+
+The Week 4 notes also capture the app design breakout exercise where students must design a dating-safety app by separately articulating conceptual design (what elements should exist), information design (how information is structured), and interaction design (what happens on touch). The exercise teaches that clear, layered design articulation is itself a core PM skill — you do not need to be a designer, but you must communicate design intent at each layer.
 
 ### Three Pillars of Growth
 

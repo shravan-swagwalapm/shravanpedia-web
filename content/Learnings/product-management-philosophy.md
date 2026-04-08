@@ -3,7 +3,7 @@ title: "Product Management Philosophy"
 category: Learnings
 created: 2026-04-08
 updated: 2026-04-09
-source: "LinkedIn post extracts -- 1,983 posts tagged product_management (top 30 analyzed)"
+source: "LinkedIn post extracts -- 1,983 posts tagged product_management (top 30 analyzed); MPM session notes PDFs Weeks 1-7"
 tags: [product-management, pm-philosophy, founder-mindset, teaching, rethink-systems]
 visibility: public
 ---
@@ -34,9 +34,17 @@ One of Shravan's most distinctive takes is that product sense comes from **compa
 
 "It's the art of solving problems at scale but also ensuring it builds a happiness layer for the user." This framing is not sentimental decoration. It is a genuine alternative to the frameworks-first approach that dominates PM education.
 
+### The PM Specialization Taxonomy
+
+The MPM session notes from Week 2 reveal a detailed taxonomy of PM types that Shravan teaches as a systems-thinking exercise. Each type of PM is fundamentally a systems builder — the prefix simply defines which system they optimize. The Technical Product Manager builds the tech system (architecture, APIs, infrastructure), translating business problems into technical requirements and understanding latency, system architecture, and tech trade-offs. TPMs are explicitly distinguished from Product Owners: TPMs are strategic and involved in discovery, while POs focus on execution only without discovery or strategy. The Data Product Manager builds the data system (pipelines, warehousing, dashboards), following a five-step workflow: identify what data to capture based on the user journey, define data nomenclature with naming conventions for events and attributes, perform ETL (extract, transform, load) to move raw data into structured warehouses, normalize inconsistencies, and build the business intelligence layer for consistent decision-making. The Growth Product Manager builds the growth system (loops, referrals, virality). Shravan teaches that every PM is a systems builder — "the prefix just defines which system you're optimizing" — and this framing connects PM career identity directly to [[systems-thinking]] rather than treating specializations as siloed domains.
+
+The notes also codify a critical distinction between functional skills and principle skills. Functional skills are domain knowledge — payments, edtech, healthcare — and they get you hired. Principle skills are first-principles thinking, discovery, insight-generation, and communication — and they help you thrive and grow. Most PM courses teach only functional skills. The MPM cohort deliberately weights principle skills because they transfer across domains and compound over time.
+
 ### AI as a Second Brain, Not a Replacement
 
 His 2025-2026 evolution reframes AI's role for product managers. "Building in 2026 is not about who knows prompting. It's about who can think clearly with AI as a co-builder." He positions AI as a "side brain" -- first principles and clarity of thought still win. His program, MPM 2.0, weaves AI into every PM decision: discovery, execution, analytics, storytelling. The overarching conviction: "Great PMs don't just ship features, they ship trust."
+
+The Week 4 session notes elaborate this into a nuanced AI fluency framework. Shravan distinguishes between the service layer of AI (using tools like ChatGPT and Perplexity to accomplish tasks) and the product layer (understanding how AI works under the hood — why models hallucinate, what influences outputs, how to design user flows involving probabilistic outcomes). He teaches that AI systems are fundamentally probabilistic, not deterministic — every output is a likely guess, not a guaranteed fact — and introduces the concept of regret ratio as a model's level of incorrectness over time. The practical implication for PMs is stark: "Most PMs focus on the value of AI. But few design for the limitations of AI." He draws a clear boundary: AI is useful for speed, not for first-principle reasoning. "If you're letting AI do the thinking, then what are you doing?" Prompt engineering is taught as a genuine engineering discipline — comparable to trial-and-error iteration in hardware — not just writing, requiring structured instructions with output clarity, constraints, context, and return format.
 
 ### Teaching as Mission
 

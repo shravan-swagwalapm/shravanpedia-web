@@ -3,7 +3,7 @@ title: "Product Analytics Framework"
 category: Learnings
 created: 2026-04-09
 updated: 2026-04-09
-source: "MPM Cohort transcripts, Weeks 5-8"
+source: "MPM Cohort transcripts, Weeks 5-8; MPM session notes PDFs Weeks 5-6"
 tags: [analytics, metrics, experimentation, ab-testing, product-market-fit, activation]
 visibility: public
 ---
@@ -31,6 +31,24 @@ Perhaps the most distinctive element is his insistence that every business can b
 His teaching on retention rate as the single most important indicator of product-market fit is paired with the concept of area under the curve. The terminal retention rate tells you how sticky the product is, but the area under the retention curve tells you the total value a cohort delivers to the business. Different cohorts can have different terminal rates but dramatically different total value depending on the shape of their curves.
 
 He also introduces Fermi estimation as a critical PM skill, teaching students that in any estimate with ten variables, only two or three have meaningful correlation to the final number. He challenges students live: "What is the population of Bangalore?" Most guess wrong. His point: if your foundational assumptions are off, no amount of analytical sophistication will save you.
+
+### Business Equations and Financial Literacy
+
+The Week 5 session notes reveal a substantial teaching block on business equations that the existing wiki did not capture. Shravan frames every startup as "a mathematical equation trying to maximize user happiness" and introduces the happiness function: Maximize f(x) = a1x1 + a2x2 + ... + anxn, where each ai represents a company's internal strength in a domain (marketing, product, engineering) and each xi represents that domain's effort or input. The result is the perceived value or "happiness score" for the end user. If the score exceeds the user's internal happiness benchmark, they stay. This mathematical framing connects product thinking directly to optimization theory.
+
+He then walks through the core business equations every PM must know: the basic business equation (Revenue minus Cost equals Profit), the internet business revenue formula (number of users times average revenue per user), the cash flow calculation (Revenue minus COGS minus Operating Expenses), and EBITDA as the metric that captures all operating and non-operating costs except taxes. He distinguishes between COGS (cost to deliver the product — hosting, delivery, creator costs), operating expenses (marketing, tools, salaries, customer support), non-operating expenses (rent, equipment), and R&D cost (salaries of product, engineering, and design teams — investments in future value, not expenses). The practical lesson: salary is an R&D cost when hiring for long-term capacity building, but an operating expense when hiring operations or support staff. Smart founders track R&D as a percentage of revenue — if it is too high with no progress, the company is burning.
+
+He also introduces VC investor types and what each looks for: seed-stage investors evaluate founder credibility, the idea, and founder-market fit; growth-stage investors evaluate operating profitability and the roadmap; late-stage investors evaluate profits, EBITDA, ARPU, and LTV/CAC. The teaching that "VCs love founders who are operationally profitable, even if net profitability is yet to come" gives students a lens for understanding how financial metrics connect to fundraising strategy.
+
+### A/B Testing as Rigorous Experimentation
+
+The Week 6 session notes add substantial depth to the experimentation teaching. Shravan draws a sharp distinction: A/B testing is not limited to visual design changes — it applies equally to backend logic, business flows, and recommendation engines. The Uber pre-payment case study illustrates this: Uber's shift from post-ride to pre-ride payment changed nothing visually but fundamentally altered backend behavior and the user journey, and was itself an A/B test that saved the company real money despite worsening UX.
+
+He teaches the mechanics with precision. A good A/B test requires a clearly defined traffic source (you must isolate to a known, consistent traffic stream), a control versus variant structure, and a metric that is quantifiable, directional, and business-impacting. Good metrics have a numerator and denominator — percentage of form completions, average cart value, bounce rate. Bad metrics are vague aspirations like "improve UX" or "get more interest." Statistical significance is taught with specific thresholds: the p-value must be below 0.05 (a five percent or lower probability that the result occurred by chance), sample size must be sufficient for valid conclusions, and test duration depends on how fast you can reach that sample size.
+
+He introduces the traffic allocation tradeoff: one to five percent of traffic is low risk but takes longer to reach significance; ten to twenty percent is balanced; fifty percent is fast but high risk if the variant is bad. The right choice depends on the stage of the company (startups can afford fifty-fifty splits for speed), how critical the flow is, and how fast answers are needed. He distinguishes A/B testing from split testing — A/B tests use the same URL with different logic, while split tests direct traffic to completely separate URLs — and from multivariate testing, which changes multiple elements simultaneously and tracks all permutations but requires dramatically more traffic to reach significance.
+
+Netflix and Amazon serve as case studies: Netflix tested "Top 10 in your country" versus "All-time popular" carousels against session time increase, using twenty percent of Philippines traffic. Amazon tested testimonials in the first fold versus the third fold against checkout conversion rate. These examples reinforce that experimentation at scale is a culture, not a technique — Amazon and Netflix run thousands of tests in parallel and use chaos engineering (simulating server crashes, tenfold load increases, recommendation engine failures) to build resilience alongside feature optimization.
 
 ## Impact
 

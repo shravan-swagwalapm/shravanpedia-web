@@ -3,7 +3,7 @@ title: "Systems Thinking"
 category: Learnings
 created: 2026-04-08
 updated: 2026-04-09
-source: "Systems Bible Shravan Edition, Systems Builder Plan, vault, MPM Cohort transcripts Weeks 5-8, session journals (Systems Builder Plan, Claude Code Tooling)"
+source: "Systems Bible Shravan Edition, Systems Builder Plan, vault, MPM Cohort transcripts Weeks 5-8, session journals (Systems Builder Plan, Claude Code Tooling), MPM session notes PDF Week 7"
 tags: [systems, thinking, frameworks, learning, system-dynamics]
 visibility: public
 ---
@@ -39,6 +39,12 @@ Systems thinking is the connective tissue between Shravan's projects. Without it
 ### Teaching Systems Thinking in the MPM Cohort
 
 In the MPM curriculum, systems thinking is the capstone. Shravan reveals in Week 7 that the entire 7 weeks of teaching -- problem solving, design thinking, analytics, growth, roadmaps -- was system dynamics in disguise. Each topic was a subsystem. His core teaching: "A good system is self-preparing, self-evolving, self-purpose-seeking." He introduces micro loops (small feedback cycles between adjacent teams like product-tech or sales-operations) and macro loops (the larger feedback cycle where these subsystems reinforce each other). Culture itself, he teaches, is a product of loops forming within a company. See [[system-dynamics-for-pms]] for the full cohort teaching on this topic.
+
+The Week 7 session notes titled "The Art of Building Systems That Scale" significantly deepen this teaching. Shravan defines a system as a collection of meaningfully connected nodes driven toward a purpose, with three components in order of priority: purpose (the "why"), relationships (how nodes interact), and nodes (the "what" -- people, tools, infrastructure). Even if a node changes, such as a team member quitting, the system should still function if purpose and relationships are well-designed. This hierarchy is the single most common mistake PMs make: obsessing over individual nodes while ignoring the purpose and relationships that determine whether the system actually works.
+
+He introduces the concept of chaordic systems -- a balance of chaos and order. A good system is self-organizing (teams know how to act without escalation), self-repairing (one member leaves and the system heals), self-sustaining (progress happens even without daily Slack pings), and responsive to external shocks (able to handle layoffs, churn, or market pivots). He also teaches that behavior is systemic, not personal: when a developer ships late, the wrong question is "why is that dev slow?" and the right question is "what system is incentivizing or discouraging this behavior?" Maybe the PR review system creates bottlenecks. Maybe the planning system is reactive rather than proactive. System greater than individual, always.
+
+The most distinctive addition is his framework for product system workflows. A PRD is not a document -- it is a signal in a system. The full product system comprises a Discovery System (user interviews, notes, research synthesis), a Design System (wireframes, prototypes, design reviews), an Engineering System (tickets, architecture docs, sprint cycles), and a Feedback System (analytics, metrics, heatmaps, reviews). Each has its own nodes, relationships, and purpose. The PM's job is to ensure these subsystems are connected and that each has functional feedback loops. "If you need to be in every meeting, your system hasn't scaled."
 
 ### Systems Thinking and the PM Compute Gap
 
