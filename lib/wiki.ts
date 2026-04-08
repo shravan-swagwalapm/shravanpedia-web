@@ -4,11 +4,25 @@ import matter from "gray-matter";
 import { Article, ArticleFrontmatter, Backlink, SearchEntry } from "./types";
 import { renderMarkdown } from "./markdown";
 
+const CONTENT_DIR = path.join(/* turbopackIgnore: true */ process.cwd(), "content");
+const VAULT_DIR = path.join(/* turbopackIgnore: true */ process.env.HOME ?? "", "ProductBrain", "Shravanpedia");
+
+// Use content/ dir (for Vercel) if it exists, otherwise read from vault directly
 const VAULT_PATH =
   process.env.SHRAVANPEDIA_PATH ??
-  path.join(/* turbopackIgnore: true */ process.env.HOME ?? "", "ProductBrain", "Shravanpedia");
+  (fs.existsSync(CONTENT_DIR) ? CONTENT_DIR : VAULT_DIR);
 
 const EXCLUDED_FILES = new Set(["SCHEMA.md", "index.md", "log.md"]);
+
+function toDateString(val: unknown): string {
+  if (!val) return "";
+  if (val instanceof Date) return val.toISOString().slice(0, 10);
+  const s = String(val);
+  // Already YYYY-MM-DD
+  if (/^\d{4}-\d{2}-\d{2}$/.test(s)) return s;
+  const d = new Date(s);
+  return isNaN(d.getTime()) ? s : d.toISOString().slice(0, 10);
+}
 
 function kebabToTitle(slug: string): string {
   return slug
@@ -95,10 +109,10 @@ export async function getAllArticles(): Promise<Article[]> {
           title: fm.title ?? kebabToTitle(fileName),
           category: fm.category ?? categoryDir,
           created: fm.created
-            ? String(fm.created)
+            ? toDateString(fm.created)
             : stat.birthtime.toISOString().slice(0, 10),
           updated: fm.updated
-            ? String(fm.updated)
+            ? toDateString(fm.updated)
             : stat.mtime.toISOString().slice(0, 10),
           source: fm.source,
           tags: fm.tags ?? [],

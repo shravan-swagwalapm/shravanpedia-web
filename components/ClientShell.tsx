@@ -33,15 +33,20 @@ export default function ClientShell({
   }, []);
 
   useEffect(() => {
-    const trigger = document.getElementById("search-trigger");
-    if (!trigger) return;
-
     function handleClick() {
       setSearchOpen(true);
     }
 
-    trigger.addEventListener("click", handleClick);
-    return () => trigger.removeEventListener("click", handleClick);
+    const trigger = document.getElementById("search-trigger");
+    const triggerBtn = document.getElementById("search-trigger-btn");
+
+    trigger?.addEventListener("click", handleClick);
+    triggerBtn?.addEventListener("click", handleClick);
+
+    return () => {
+      trigger?.removeEventListener("click", handleClick);
+      triggerBtn?.removeEventListener("click", handleClick);
+    };
   }, []);
 
   return (

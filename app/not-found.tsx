@@ -1,26 +1,24 @@
+import Header from "@/components/Header";
 import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <div className="flex flex-1 items-center justify-center px-6 py-20">
-      <div className="text-center max-w-md">
-        <h1 className="text-6xl font-bold text-[var(--text-tertiary)] mb-4">
-          404
-        </h1>
-        <h2 className="text-xl font-semibold text-[var(--text-primary)] mb-2">
-          Article not found
-        </h2>
-        <p className="text-sm text-[var(--text-secondary)] mb-6">
-          This article doesn&apos;t exist or is private.
+    <>
+      <Header />
+      <main className="wiki-content" style={{ paddingTop: "40px", paddingBottom: "40px" }}>
+        <h1 className="wiki-article-title">Page not found</h1>
+        <p className="wiki-article-tagline">
+          From Shravanpedia, the personal encyclopedia
         </p>
-        <Link
-          href="/"
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-[var(--bg-surface)] border border-[var(--border)] text-sm font-medium text-[var(--text-primary)] transition-colors hover:bg-[var(--bg-hover)]"
-        >
-          <span aria-hidden="true">&larr;</span>
-          Back to home
-        </Link>
-      </div>
-    </div>
+        <hr className="wiki-hr" style={{ marginTop: "8px" }} />
+        <p style={{ marginTop: "16px", fontSize: "14px" }}>
+          The article you are looking for does not exist. It may have been moved
+          or not yet written.
+        </p>
+        <p style={{ marginTop: "8px", fontSize: "14px" }}>
+          <Link href="/">Return to the main page</Link>
+        </p>
+      </main>
+    </>
   );
 }

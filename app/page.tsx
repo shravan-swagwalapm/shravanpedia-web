@@ -1,8 +1,5 @@
 import Header from "@/components/Header";
-import Sidebar from "@/components/Sidebar";
-import FeaturedArticle from "@/components/FeaturedArticle";
-import RecentlyUpdated from "@/components/RecentlyUpdated";
-import CategoryCard from "@/components/CategoryCard";
+import Link from "next/link";
 import {
   getAllArticles,
   getCategoryCounts,
@@ -21,7 +18,7 @@ export default async function Home() {
     getSearchIndex(),
   ]);
 
-  // Write search index for client-side search and /random
+  // Write search index for client-side search
   const publicDir = path.join(process.cwd(), "public");
   if (!fs.existsSync(publicDir)) fs.mkdirSync(publicDir, { recursive: true });
   fs.writeFileSync(
@@ -31,98 +28,137 @@ export default async function Home() {
 
   const recentArticles = articles.slice(0, 8);
 
-  if (articles.length === 0) {
-    return (
-      <>
-        <Header />
-        <div className="flex flex-1">
-          <Sidebar categoryCounts={categoryCounts} activePath="/" />
-          <main
-            id="main-content"
-            className="flex-1 flex items-center justify-center p-8"
-          >
-            <div className="text-center">
-              <h1 className="text-2xl font-semibold text-[var(--text-primary)] mb-2">
-                No articles yet
-              </h1>
-              <p className="text-sm text-[var(--text-secondary)]">
-                Add markdown files to your Shravanpedia vault with{" "}
-                <code className="px-1.5 py-0.5 rounded bg-[var(--bg-hover)] text-xs font-mono">
-                  visibility: public
-                </code>{" "}
-                to get started.
-              </p>
-            </div>
-          </main>
-        </div>
-      </>
-    );
+  // Group articles by category for portal boxes
+  const articlesByCategory = new Map<string, typeof articles>();
+  for (const a of articles) {
+    const existing = articlesByCategory.get(a.categorySlug) ?? [];
+    existing.push(a);
+    articlesByCategory.set(a.categorySlug, existing);
   }
 
   return (
     <>
       <Header />
-      <div className="flex flex-1">
-        <Sidebar categoryCounts={categoryCounts} activePath="/" />
-        <main id="main-content" className="flex-1 min-w-0 overflow-y-auto">
-          {/* Hero */}
-          <section className="px-6 lg:px-10 pt-10 pb-8">
-            <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-[#1d4ed8] to-[#7c3aed] bg-clip-text text-transparent mb-2">
-              Welcome to Shravanpedia
-            </h1>
-            <p className="text-lg text-[var(--text-secondary)] font-[Newsreader,serif] italic mb-5">
-              A personal wiki of people, projects, learnings, and ideas
-            </p>
-            <div className="flex flex-wrap gap-2">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-[var(--bg-surface)] border border-[var(--border)] text-[var(--text-secondary)]">
-                {articles.length} article{articles.length !== 1 ? "s" : ""}
-              </span>
-              <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-xs font-medium bg-[var(--bg-surface)] border border-[var(--border)] text-[var(--text-secondary)]">
-                {categoryCounts.length} categor
-                {categoryCounts.length !== 1 ? "ies" : "y"}
-              </span>
-            </div>
-          </section>
+      <main id="main-content" className="wiki-content">
+        {/* Portal banner */}
+        <div className="wiki-portal-banner">
+          <h1 className="wiki-portal-title">
+            Welcome to Shravanpedia
+          </h1>
+          <p className="wiki-portal-subtitle">
+            A personal encyclopedia by Shravan Tickoo
+          </p>
+          <p className="wiki-portal-stats">
+            {articles.length} articles across {categoryCounts.length} categories
+          </p>
+        </div>
 
-          {/* Featured + Recent */}
-          <section className="px-6 lg:px-10 pb-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              {featured && (
-                <div>
-                  <h2 className="text-sm font-semibold uppercase tracking-wider text-[var(--text-tertiary)] mb-4">
-                    Featured
-                  </h2>
-                  <FeaturedArticle article={featured} />
+        <hr className="wiki-hr" />
+
+        {/* Featured article */}
+        {featured && (
+          <div className="wiki-featured" style={{ margin: "16px 0" }}>
+            <div className="wiki-featured-header">
+              Featured article
+            </div>
+            <div className="wiki-featured-body">
+              <p>
+                <strong>
+                  <Link href={`/${featured.categorySlug}/${featured.slug}`}>
+                    {featured.frontmatter.title}
+                  </Link>
+                </strong>
+                {featured.summary && (
+                  <> &ndash; <em>{featured.summary}</em></>
+                )}
+              </p>
+              <p style={{ fontSize: "13px", marginTop: "8px" }}>
+                <Link href={`/${featured.categorySlug}/${featured.slug}`}>
+                  Read full article &rarr;
+                </Link>
+              </p>
+            </div>
+          </div>
+        )}
+
+        {/* Portal grid — category boxes */}
+        <div className="wiki-portal-grid">
+          {categoryCounts.map(({ slug, count }) => {
+            const meta = getCategoryMeta(slug);
+            const catArticles = articlesByCategory.get(slug) ?? [];
+            return (
+              <div key={slug} className="wiki-portal-box">
+                <div className="wiki-portal-box-header">
+                  <Link
+                    href={`/category/${slug}`}
+                    style={{ color: "inherit", textDecoration: "none" }}
+                  >
+                    {meta.name}
+                  </Link>
+                  {" "}
+                  <span style={{ fontSize: "12px", fontWeight: 400, color: "var(--text-light)" }}>
+                    ({count})
+                  </span>
                 </div>
-              )}
-              {recentArticles.length > 0 && (
-                <div>
-                  <RecentlyUpdated articles={recentArticles} />
+                <div className="wiki-portal-box-body">
+                  <ul>
+                    {catArticles.slice(0, 5).map((a) => (
+                      <li key={a.slug}>
+                        <Link href={`/${a.categorySlug}/${a.slug}`}>
+                          {a.frontmatter.title}
+                        </Link>
+                        {a.summary && (
+                          <span>
+                            {" "}&ndash; {a.summary.length > 80 ? a.summary.slice(0, 80) + "..." : a.summary}
+                          </span>
+                        )}
+                      </li>
+                    ))}
+                    {catArticles.length > 5 && (
+                      <li style={{ fontStyle: "italic" }}>
+                        <Link href={`/category/${slug}`}>
+                          ... and {catArticles.length - 5} more
+                        </Link>
+                      </li>
+                    )}
+                  </ul>
                 </div>
-              )}
-            </div>
-          </section>
+              </div>
+            );
+          })}
+        </div>
 
-          {/* Divider */}
-          <div className="mx-6 lg:mx-10 border-t border-[var(--border)]" />
-
-          {/* Category Cards */}
-          <section className="px-6 lg:px-10 py-8">
-            <h2 className="text-sm font-semibold uppercase tracking-wider text-[var(--text-tertiary)] mb-4">
-              Explore by Category
-            </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-              {categoryCounts.map(({ slug, count }) => (
-                <CategoryCard
-                  key={slug}
-                  meta={getCategoryMeta(slug)}
-                  count={count}
-                />
-              ))}
-            </div>
-          </section>
-        </main>
-      </div>
+        {/* Recently updated */}
+        <div style={{ marginTop: "24px", marginBottom: "32px" }}>
+          <h2 style={{
+            fontFamily: "'Linux Libertine', Georgia, serif",
+            fontSize: "22px",
+            fontWeight: 400,
+            borderBottom: "1px solid var(--border-lighter)",
+            paddingBottom: "4px",
+            marginBottom: "8px",
+          }}>
+            Recently updated
+          </h2>
+          <ul style={{ listStyle: "disc", paddingLeft: "24px", fontSize: "14px" }}>
+            {recentArticles.map((a) => (
+              <li key={a.slug} style={{ padding: "2px 0" }}>
+                <Link href={`/${a.categorySlug}/${a.slug}`}>
+                  {a.frontmatter.title}
+                </Link>
+                <span style={{
+                  fontSize: "12px",
+                  color: "var(--text-faint)",
+                  marginLeft: "6px",
+                  fontFamily: "-apple-system, BlinkMacSystemFont, sans-serif"
+                }}>
+                  ({a.frontmatter.updated})
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </main>
     </>
   );
 }

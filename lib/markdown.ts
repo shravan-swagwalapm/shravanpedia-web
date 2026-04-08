@@ -73,7 +73,15 @@ function extractHeadings(html: string): Heading[] {
   let match: RegExpExecArray | null;
 
   while ((match = regex.exec(html)) !== null) {
-    const text = match[3].replace(/<[^>]+>/g, "").trim();
+    const text = match[3]
+      .replace(/<[^>]+>/g, "")
+      .replace(/&#x26;/g, "&")
+      .replace(/&#x27;/g, "'")
+      .replace(/&amp;/g, "&")
+      .replace(/&lt;/g, "<")
+      .replace(/&gt;/g, ">")
+      .replace(/&quot;/g, '"')
+      .trim();
     headings.push({
       depth: parseInt(match[1]),
       id: match[2],

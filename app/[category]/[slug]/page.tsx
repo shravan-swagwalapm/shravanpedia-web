@@ -1,15 +1,14 @@
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Link from "next/link";
+import Image from "next/image";
 import Header from "@/components/Header";
-import Sidebar from "@/components/Sidebar";
-import ReadingProgress from "@/components/ReadingProgress";
-import Backlinks from "@/components/Backlinks";
-import RelatedPills from "@/components/RelatedPills";
+import fs from "fs";
+import path from "path";
 import {
   getAllArticles,
   getArticle,
   getBacklinks,
-  getCategoryCounts,
 } from "@/lib/wiki";
 import { getCategoryMeta } from "@/lib/categories";
 
@@ -41,94 +40,238 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   };
 }
 
-function extractRelatedSlugs(content: string): string[] {
-  const relatedSection = content.match(
-    /## Related\s*\n([\s\S]*?)(?=\n## |\n---|\n$|$)/
-  );
-  if (!relatedSection) return [];
-
-  const links: string[] = [];
-  const wikiLinkRegex = /\[\[([^\]|]+)(?:\|[^\]]+)?\]\]/g;
-  let match: RegExpExecArray | null;
-  while ((match = wikiLinkRegex.exec(relatedSection[1])) !== null) {
-    links.push(match[1].trim().toLowerCase().replace(/\s+/g, "-"));
-  }
-  return links;
-}
-
 export default async function ArticlePage({ params }: PageProps) {
   const { category, slug } = await params;
-  const [article, allArticles, backlinksMap, categoryCounts] =
-    await Promise.all([
-      getArticle(category, slug),
-      getAllArticles(),
-      getBacklinks(),
-      getCategoryCounts(),
-    ]);
+  const [article, allArticles, backlinksMap] = await Promise.all([
+    getArticle(category, slug),
+    getAllArticles(),
+    getBacklinks(),
+  ]);
 
   if (!article) notFound();
 
   const meta = getCategoryMeta(article.frontmatter.category);
   const backlinks = backlinksMap.get(article.slug) ?? [];
-  const relatedSlugs = extractRelatedSlugs(article.content);
+  const hasToC = article.headings.length >= 3;
+
+  // Check for article photo in public/images/
+  const photoExtensions = [".jpeg", ".jpg", ".png", ".webp"];
+  let photoPath: string | null = null;
+  for (const ext of photoExtensions) {
+    const imgFile = path.join(process.cwd(), "public", "images", `${slug}${ext}`);
+    if (fs.existsSync(imgFile)) {
+      photoPath = `/images/${slug}${ext}`;
+      break;
+    }
+  }
+
+  // Build infobox data from frontmatter
+  const infoboxRows: Array<{ label: string; value: string }> = [];
+  if (article.frontmatter.category) {
+    infoboxRows.push({ label: "Category", value: article.frontmatter.category });
+  }
+  if (article.frontmatter.created) {
+    infoboxRows.push({ label: "Created", value: article.frontmatter.created });
+  }
+  if (article.frontmatter.updated) {
+    infoboxRows.push({ label: "Updated", value: article.frontmatter.updated });
+  }
+  if (article.frontmatter.tags && article.frontmatter.tags.length > 0) {
+    infoboxRows.push({ label: "Tags", value: article.frontmatter.tags.join(", ") });
+  }
+  if (article.frontmatter.source) {
+    infoboxRows.push({ label: "Source", value: article.frontmatter.source });
+  }
+  infoboxRows.push({ label: "Reading", value: `${article.readingTime} min` });
+
+  // Extract related articles
+  const relatedSection = article.content.match(
+    /## Related\s*\n([\s\S]*?)(?=\n## |\n---|\n$|$)/
+  );
+  const relatedSlugs: string[] = [];
+  if (relatedSection) {
+    const wikiLinkRegex = /\[\[([^\]|]+)(?:\|[^\]]+)?\]\]/g;
+    let match: RegExpExecArray | null;
+    while ((match = wikiLinkRegex.exec(relatedSection[1])) !== null) {
+      relatedSlugs.push(match[1].trim().toLowerCase().replace(/\s+/g, "-"));
+    }
+  }
+  const relatedArticles = relatedSlugs
+    .map((s) => allArticles.find((a) => a.slug === s))
+    .filter(Boolean);
 
   return (
     <>
       <Header />
-      <ReadingProgress />
-      <div className="flex flex-1">
-        <Sidebar
-          categoryCounts={categoryCounts}
-          activePath={`/${category}/${slug}`}
-          toc={article.headings}
-        />
-        <main
-          id="main-content"
-          className="flex-1 min-w-0 overflow-y-auto px-6 lg:px-10 py-8 max-w-3xl"
-        >
-          {/* Meta line */}
-          <div className="flex flex-wrap items-center gap-3 mb-4 text-sm">
-            <span
-              className="inline-block px-2.5 py-0.5 rounded-full text-xs font-medium"
-              style={{ backgroundColor: meta.bgColor, color: meta.color }}
-            >
-              {meta.name}
-            </span>
-            <span className="text-[var(--text-tertiary)]">
-              {article.frontmatter.updated}
-            </span>
-            <span className="text-[var(--text-tertiary)]">
-              {article.readingTime} min read
-            </span>
-          </div>
+      <main id="main-content" className="wiki-content" style={{ paddingBottom: "40px" }}>
+        {/* Article title */}
+        <h1 className="wiki-article-title">
+          {article.frontmatter.title}
+        </h1>
 
-          {/* Title */}
-          <h1 className="text-3xl sm:text-4xl font-bold text-[var(--text-primary)] mb-4 leading-tight">
+        {/* From Shravanpedia tagline */}
+        <p className="wiki-article-tagline">
+          From Shravanpedia, the personal encyclopedia
+        </p>
+
+        {/* Tabs */}
+        <div className="wiki-tabs">
+          <span className="wiki-tab wiki-tab-active">Article</span>
+          <span className="wiki-tab" style={{ color: "var(--text-faint)" }}>
+            {article.readingTime} min read
+          </span>
+          <div style={{ flex: 1 }} />
+          <span className="wiki-tab" style={{ color: "var(--text-faint)", fontSize: "12px" }}>
+            Updated {article.frontmatter.updated}
+          </span>
+        </div>
+
+        {/* Infobox — floats right */}
+        <div className="wiki-infobox">
+          <div className="wiki-infobox-header">
             {article.frontmatter.title}
-          </h1>
-
-          {/* Summary */}
-          {article.summary && (
-            <div className="mb-8 pl-4 border-l-2 border-gradient-to-b from-[var(--accent)] to-transparent">
-              <p className="text-lg text-[var(--text-secondary)] font-[Newsreader,serif] italic leading-relaxed">
-                {article.summary}
-              </p>
+          </div>
+          {photoPath && (
+            <div style={{ textAlign: "center", padding: "8px 10px 4px", background: "var(--bg-box)" }}>
+              <Image
+                src={photoPath}
+                alt={article.frontmatter.title}
+                width={220}
+                height={280}
+                style={{ objectFit: "cover", margin: "0 auto" }}
+                unoptimized
+              />
+              <div style={{ fontSize: "11px", color: "var(--text-faint)", marginTop: "4px", fontStyle: "italic" }}>
+                {article.frontmatter.title}
+              </div>
             </div>
           )}
+          <div className="wiki-infobox-subheader" style={{ background: meta.bgColor }}>
+            {meta.name}
+          </div>
+          {infoboxRows.map((row) => (
+            <div key={row.label} className="wiki-infobox-row">
+              <div className="wiki-infobox-label">{row.label}</div>
+              <div className="wiki-infobox-value">{row.value}</div>
+            </div>
+          ))}
+          {backlinks.length > 0 && (
+            <div className="wiki-infobox-row">
+              <div className="wiki-infobox-label">Linked from</div>
+              <div className="wiki-infobox-value">
+                {backlinks.length} article{backlinks.length !== 1 ? "s" : ""}
+              </div>
+            </div>
+          )}
+        </div>
 
-          {/* Article body */}
-          <article
-            className="prose prose-neutral dark:prose-invert max-w-none prose-headings:scroll-mt-20 prose-a:text-[var(--accent)] prose-a:no-underline hover:prose-a:underline prose-code:text-[13px] prose-code:font-[JetBrains_Mono,monospace]"
-            dangerouslySetInnerHTML={{ __html: article.html }}
-          />
+        {/* Summary */}
+        {article.summary && (
+          <p style={{ fontSize: "14px", marginTop: "12px", marginBottom: "4px" }}>
+            <strong>{article.frontmatter.title}</strong> &ndash;{" "}
+            <em>{article.summary}</em>
+          </p>
+        )}
 
-          {/* Backlinks */}
-          <Backlinks backlinks={backlinks} />
+        {/* Table of Contents */}
+        {hasToC && (
+          <div className="wiki-toc">
+            <div className="wiki-toc-title">Contents</div>
+            <ol>
+              {article.headings
+                .filter((h) => h.depth === 2)
+                .map((h, i) => {
+                  const subheadings = article.headings.filter(
+                    (sh) =>
+                      sh.depth === 3 &&
+                      article.headings.indexOf(sh) > article.headings.indexOf(h) &&
+                      (article.headings.findIndex(
+                        (next) =>
+                          next.depth === 2 &&
+                          article.headings.indexOf(next) > article.headings.indexOf(h)
+                      ) === -1 ||
+                        article.headings.indexOf(sh) <
+                          article.headings.findIndex(
+                            (next) =>
+                              next.depth === 2 &&
+                              article.headings.indexOf(next) > article.headings.indexOf(h)
+                          ))
+                  );
+                  return (
+                    <li key={h.id}>
+                      <a href={`#${h.id}`}>{h.text}</a>
+                      {subheadings.length > 0 && (
+                        <ol>
+                          {subheadings.map((sh) => (
+                            <li key={sh.id}>
+                              <a href={`#${sh.id}`}>{sh.text}</a>
+                            </li>
+                          ))}
+                        </ol>
+                      )}
+                    </li>
+                  );
+                })}
+            </ol>
+          </div>
+        )}
 
-          {/* Related */}
-          <RelatedPills slugs={relatedSlugs} articles={allArticles} />
-        </main>
-      </div>
+        {/* Article body */}
+        <div
+          className="article-body"
+          dangerouslySetInnerHTML={{ __html: article.html }}
+        />
+
+        {/* See also / Backlinks */}
+        {backlinks.length > 0 && (
+          <div className="wiki-see-also">
+            <h2>Linked from</h2>
+            <ul>
+              {backlinks.map((bl) => (
+                <li key={bl.slug}>
+                  <Link href={`/${bl.categorySlug}/${bl.slug}`}>
+                    {bl.title}
+                  </Link>
+                  {bl.context && (
+                    <span style={{ color: "var(--text-light)", fontSize: "13px" }}>
+                      {" "}&ndash; {bl.context}
+                    </span>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* Related articles */}
+        {relatedArticles.length > 0 && (
+          <div className="wiki-see-also">
+            <h2>See also</h2>
+            <ul>
+              {relatedArticles.map((ra) => ra && (
+                <li key={ra.slug}>
+                  <Link href={`/${ra.categorySlug}/${ra.slug}`}>
+                    {ra.frontmatter.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
+
+        {/* Categories box */}
+        <div className="wiki-categories-box">
+          <strong>Categories: </strong>
+          <Link href={`/category/${article.categorySlug}`}>
+            {article.frontmatter.category}
+          </Link>
+          {article.frontmatter.tags?.map((tag) => (
+            <span key={tag} style={{ marginLeft: "4px" }}>
+              | {tag}
+            </span>
+          ))}
+        </div>
+      </main>
     </>
   );
 }

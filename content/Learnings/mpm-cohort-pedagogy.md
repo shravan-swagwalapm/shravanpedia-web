@@ -1,0 +1,65 @@
+---
+title: "MPM Cohort Pedagogy"
+category: Learnings
+created: 2026-04-09
+updated: 2026-04-09
+source: "MPM Cohort transcripts, Weeks 1-4"
+tags: [teaching, methodology, rethink-systems, cohort, product-management]
+visibility: public
+---
+
+> Mindset before method, stories before slides, behavioral change before intellectual change — how Shravan structures eight weeks that people say changed their next ten years.
+
+## Context
+
+The Mastering Product Management cohort is Shravan's most fully realized teaching artifact. While the existing wiki captures what he teaches and the outcomes it produces, the transcripts from Weeks 1 through 4 reveal something the outcomes alone cannot: how he teaches. The pedagogy is deliberate, structured, and deeply unconventional. It is not a lecture series with slides. It is a behavioral transformation program disguised as a product management course, and the disguise is the point.
+
+## Details
+
+### Week Structure: The Mindset-First Architecture
+
+The cohort opens not with product management content but with a full mindset session. No frameworks, no tools, no case studies. Just a conversation about gratitude, unlearning, and compassion. Shravan is explicit about the sequencing: "The first change is behavioral change. Then the second change is intellectual change." By the time students encounter their first product lifecycle diagram in Week 2, they have already spent hours examining their own biases, their willingness to listen, and their capacity for action without expectation of return.
+
+This is not accidental. Shravan has learned from prior cohorts that students who skip the behavioral layer — who treat the program as content to consume — plateau early. The ones who transform are those who internalized the mindset session and carried it through every subsequent week.
+
+### The Socratic Method at Scale
+
+Every concept is introduced through questions, not exposition. Shravan asks "what does 'be firm but flexible' mean to you?" and gives five students a chance to answer before revealing his own interpretation. He asks "is product-market fit static?" and lets seven students debate before drawing the lock-and-key diagram. He asks "what is a product lifecycle?" and lets four students attempt definitions before introducing Edureka's actual story.
+
+This is Socratic method, but adapted for a 60-person Zoom cohort with participants from fifteen countries and experience levels ranging from zero to twenty years. The adaptation works because Shravan enforces participation through two mechanisms. First, he calls on specific people by name: "Lalit, what do you think? Payal, I want to come to you." Second, he has a bias toward calling on women first, which he states openly: "I want more women to speak. I have a bias towards that. I'm calling this out today." The effect is that no one can hide, and the diversity of perspectives becomes the content itself.
+
+### Story as Teaching Medium
+
+The case study presentations in Weeks 3 and 4 reveal the most distinctive element of the pedagogy. Students do not present slide decks — they present stories. One team presents a YouTube engagement case study as a Munna Bhai MBBS skit, complete with character voices and Bollywood references. Another team frames a legacy planning case study through a conversation between the ghosts of Dhirubhai Ambani and Ratan Tata. A third opens with Vijaypath Singhania's family drama before pivoting to their product solution.
+
+This is not entertainment for entertainment's sake. Shravan explicitly teaches the three-part story structure before presentations begin: a hook that captures attention, a core that delivers the message, and compactness that respects the audience's time. He tells students that this structure is the same one that makes short-form content work, that makes good podcasts change questions every two minutes, and that makes his own five-hour lectures holdable. Then he evaluates every presentation against these three criteria, praising teams with strong hooks but underdeveloped solutions, and acknowledging teams with deep solutions but boring delivery.
+
+The meta-lesson is that a product manager's job is fundamentally a storytelling job. In a room with five people speaking from five different dimensions, the PM is the one who provides the narrative that aligns everyone. If you cannot hook your audience, hold their attention, and deliver a compact message, it does not matter how good your PRD is.
+
+### Case Studies with No Clear Answer
+
+Shravan designs case studies that are deliberately ambiguous. The YouTube long-form content problem in Weeks 3-4 has no single correct solution — and Shravan says as much: "I typically pick up problems which generally don't have a solution in the market." The Swiggy menu-selector exercise in Week 4 asks students to diagnose a problem from three possible causes, and the classroom splits three ways. Shravan does not resolve the split.
+
+The pedagogy behind this is precise. If a case study has one right answer, students optimize for finding it. If it has no right answer, students are forced to develop judgment — the ability to weigh tradeoffs, argue for a position, and change their mind when evidence warrants it. This is the same skill they will need in real product roles, where the PM's job is not to be right but to make the best decision possible with incomplete information.
+
+### The Mentor Manifesto
+
+Shravan codifies the mentoring philosophy in a document he reads to every cohort. The key distinction: a mentor is a guide, not a king. A guide gives direction; a king directs. Mentors do not tell students what decisions to make. They redirect students who wander outside the scope of a given week's focus. Their involvement is calibrated — some weeks they spend every day with the team; other weeks, two hours suffice. What matters is the success of the group they lead.
+
+Mentors are all program alumni. Unnati was a cohort-one student who knew nothing about product management, cracked a PM role in four weeks, and now mentors incoming students. Kevin was already a technical PM at Salesforce but joined the cohort to learn storytelling and community building. This alumni-to-mentor pipeline is the mechanism by which the community compounds — each generation teaches the next, scaling the instructor's bandwidth without diluting the culture.
+
+### The Dollar Value of Time
+
+Shravan assigns his time an explicit dollar value — $5,000 per hour — and encourages students to do the same. This is not bravado; it is a prioritization framework. If an hour of your time is worth a specific amount, you structure your day to spend it on things that justify that value. He connects this to why the cohort costs $1,000: the price is not a revenue target but a commitment device. Students who paid for the experience treat five-hour sessions differently than they would a free YouTube video.
+
+He also uses this framing to explain why the sessions are long: "If I can very well do these lectures in one and a half hours, I can finish it. The problem is you will not develop that depth. You'll not be able to answer at second-order thinking." The length is not indulgence — it is the time required for behavioral change to take root.
+
+## Impact
+
+The MPM pedagogy produces results that content alone cannot explain. The 92+ NPS, the 60-75 career transitions per cohort, and the fact that alumni stay connected as mentors years later — these are outcomes of a teaching method that prioritizes behavioral transformation over information transfer. Shravan has essentially built a product where the user (the student) does not realize the real product (mindset change) until after they have consumed the apparent product (PM skills). The cohort is, in his own framing, a system designed so that when students finally understand what happened to them, they say: "You duped us into learning human values instead of product management."
+
+## Related
+- [[teaching-and-mentoring]]
+- [[rethink-systems]]
+- [[three-superpowers]]
+- [[product-management-philosophy]]
