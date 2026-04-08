@@ -3,9 +3,10 @@ title: "MPM Cohort Pedagogy"
 category: Learnings
 created: 2026-04-09
 updated: 2026-04-09
-source: "MPM Cohort transcripts, Weeks 1-4"
+source: "MPM Cohort transcripts, Weeks 1-4; MPM session notes PDFs Weeks 1-7"
 tags: [teaching, methodology, rethink-systems, cohort, product-management]
 visibility: public
+updated: 2026-04-09
 ---
 
 > Mindset before method, stories before slides, behavioral change before intellectual change — how Shravan structures eight weeks that people say changed their next ten years.
@@ -21,6 +22,10 @@ The Mastering Product Management cohort is Shravan's most fully realized teachin
 The cohort opens not with product management content but with a full mindset session. No frameworks, no tools, no case studies. Just a conversation about gratitude, unlearning, and compassion. Shravan is explicit about the sequencing: "The first change is behavioral change. Then the second change is intellectual change." By the time students encounter their first product lifecycle diagram in Week 2, they have already spent hours examining their own biases, their willingness to listen, and their capacity for action without expectation of return.
 
 This is not accidental. Shravan has learned from prior cohorts that students who skip the behavioral layer — who treat the program as content to consume — plateau early. The ones who transform are those who internalized the mindset session and carried it through every subsequent week.
+
+The session notes reveal additional frameworks taught in Week 1 that reinforce this architecture. Shravan introduces the Five Levels of Operators — a progression from Useless Operator (cannot execute tasks properly), through Task Monkey (follows instructions but does not think independently), Problem Solver (can solve problems when given but lacks scalability), Systems Thinker (builds long-term scalable solutions), to Superstar (identifies the right problems before anyone else and solves them at scale). The explicit goal is to move students from problem solver to systems thinker to superstar over the course of the program. He also teaches the Three Career Horizons framework, contrasting what most people think at each level with how one-percent operators actually think. In the short term, most people ask "Do I like my manager?" while the one-percent operator asks "Am I learning today?" In the medium term, most ask "Will I get a raise in six months?" while the operator asks "How do I compound my skills?" In the long term, most ask "What's my next job?" while the operator asks "Where will I be in ten years?" The framework is designed to shift students from the medium-term mindset where most careers stagnate into the long-term compounding orientation that produces disproportionate results.
+
+Perhaps the most philosophically rich addition from the Week 1 notes is the Ego versus Self-Worth distinction, taught through a detailed comparative framework. Ego is defined as a reflection of how we see ourselves based on external validation — what others think of me — while self-worth is a deeply internalized understanding of one's value independent of external opinions. The practical consequence for PMs is that ego blocks feedback reception ("I have 10+ years of experience, I shouldn't need to learn this"), while self-worth enables it ("I am always learning"). Shravan teaches that ego-driven cultures focus on titles, status, and hierarchy, while self-worth-driven cultures focus on collaboration, learning, and respect. The Staircase of Self maps a progression from inferiority through self-esteem, pride, a fork between fall (ego leading to arrogance and collapse) and growth (gratitude leading to humility and wisdom), and ultimately to No Self — the state of serving without needing applause, like the heart pumping blood without asking for payment.
 
 ### The Socratic Method at Scale
 
