@@ -1,0 +1,300 @@
+@import "tailwindcss";
+
+/* ───────────────────────────────────────────────
+   Design System — Shravanpedia
+   ─────────────────────────────────────────────── */
+
+:root {
+  /* Surfaces */
+  --bg: #faf9f7;
+  --bg-surface: #ffffff;
+  --bg-sidebar: #f7f6f3;
+  --bg-hover: #efedea;
+
+  /* Text */
+  --text-primary: #1a1816;
+  --text-secondary: #6b6560;
+  --text-tertiary: #a39e98;
+  --text-link: #1d4ed8;
+
+  /* Borders */
+  --border: #e8e5e0;
+  --border-light: #f0ede8;
+
+  /* Accent */
+  --accent: #1d4ed8;
+  --accent-soft: #eef2ff;
+
+  /* Category colors */
+  --cat-people: #7c3aed;
+  --cat-people-bg: #f5f3ff;
+  --cat-projects: #059669;
+  --cat-projects-bg: #ecfdf5;
+  --cat-learnings: #b45309;
+  --cat-learnings-bg: #fffbeb;
+  --cat-inspirations: #be123c;
+  --cat-inspirations-bg: #fff1f2;
+  --cat-ideas: #1d4ed8;
+  --cat-ideas-bg: #eef2ff;
+  --cat-interests: #0e7490;
+  --cat-interests-bg: #ecfeff;
+  --cat-places: #4d7c0f;
+  --cat-places-bg: #f7fee7;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.07),
+    0 2px 4px -2px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.08),
+    0 4px 6px -4px rgba(0, 0, 0, 0.04);
+}
+
+[data-theme="dark"] {
+  --bg: #0f0f10;
+  --bg-surface: #1a1a1c;
+  --bg-sidebar: #141416;
+  --bg-hover: #252528;
+
+  --text-primary: #e8e6e3;
+  --text-secondary: #9a958f;
+  --text-tertiary: #5c5750;
+  --text-link: #6b8eff;
+
+  --border: #2a2a2e;
+  --border-light: #1f1f22;
+
+  --accent: #6b8eff;
+  --accent-soft: #1a1f35;
+
+  --cat-people-bg: #1e1530;
+  --cat-projects-bg: #0d1f18;
+  --cat-learnings-bg: #1f1708;
+  --cat-inspirations-bg: #1f0f14;
+  --cat-ideas-bg: #111830;
+  --cat-interests-bg: #0d1a1f;
+  --cat-places-bg: #141f0c;
+
+  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3), 0 1px 2px rgba(0, 0, 0, 0.2);
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.35),
+    0 2px 4px -2px rgba(0, 0, 0, 0.25);
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.4),
+    0 4px 6px -4px rgba(0, 0, 0, 0.25);
+}
+
+/* ───────────────────────────────────────────────
+   Base
+   ─────────────────────────────────────────────── */
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, sans-serif;
+}
+
+/* ───────────────────────────────────────────────
+   Focus
+   ─────────────────────────────────────────────── */
+
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* ───────────────────────────────────────────────
+   Wiki links
+   ─────────────────────────────────────────────── */
+
+.wiki-link {
+  color: var(--text-link);
+  text-decoration: none;
+  background-image: linear-gradient(
+    to top,
+    var(--accent-soft) 0%,
+    var(--accent-soft) 40%,
+    transparent 40%
+  );
+  transition: background-size 0.15s ease;
+  background-size: 100% 100%;
+}
+
+.wiki-link:hover {
+  background-image: linear-gradient(
+    to top,
+    var(--accent-soft) 0%,
+    var(--accent-soft) 100%
+  );
+}
+
+.wiki-link-private {
+  color: var(--text-tertiary);
+  text-decoration: none;
+  border-bottom: 1px dashed var(--text-tertiary);
+  cursor: default;
+}
+
+.wiki-link-missing {
+  color: #dc2626;
+  text-decoration: none;
+  border-bottom: 1px dashed #dc2626;
+  cursor: default;
+}
+
+/* ───────────────────────────────────────────────
+   Article body typography
+   ─────────────────────────────────────────────── */
+
+.article-body h2 {
+  font-size: 1.375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border-light);
+  line-height: 1.3;
+}
+
+.article-body h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-top: 2rem;
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.article-body p {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+}
+
+.article-body ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.article-body ol {
+  list-style-type: decimal;
+  padding-left: 1.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.article-body li {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.article-body blockquote {
+  border-left: 3px solid var(--accent);
+  padding: 0.75rem 1rem;
+  margin: 1.5rem 0;
+  background: var(--accent-soft);
+  border-radius: 0 6px 6px 0;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.article-body blockquote p {
+  margin-bottom: 0;
+}
+
+.article-body table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5rem 0;
+  font-size: 0.9375rem;
+}
+
+.article-body th {
+  text-align: left;
+  font-weight: 600;
+  padding: 0.625rem 0.75rem;
+  border-bottom: 2px solid var(--border);
+  color: var(--text-primary);
+  background: var(--bg-sidebar);
+}
+
+.article-body td {
+  padding: 0.625rem 0.75rem;
+  border-bottom: 1px solid var(--border-light);
+  color: var(--text-primary);
+}
+
+.article-body code {
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 0.875em;
+  background: var(--bg-hover);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  color: var(--text-primary);
+}
+
+.article-body pre {
+  background: var(--bg-sidebar);
+  border: 1px solid var(--border-light);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  font-size: 0.875rem;
+  line-height: 1.6;
+}
+
+.article-body pre code {
+  background: transparent;
+  padding: 0;
+  border-radius: 0;
+}
+
+/* ───────────────────────────────────────────────
+   Reading progress bar
+   ─────────────────────────────────────────────── */
+
+.reading-progress {
+  position: fixed;
+  top: 3.5rem; /* below h-14 header */
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: transparent;
+  z-index: 40;
+  pointer-events: none;
+}
+
+.reading-progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent), #7c3aed);
+  transition: width 0.1s linear;
+}
+
+/* ───────────────────────────────────────────────
+   Reduced motion
+   ─────────────────────────────────────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .reading-progress-bar {
+    transition: none;
+  }
+
+  .wiki-link {
+    transition: none;
+  }
+}
