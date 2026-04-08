@@ -6,7 +6,6 @@ updated: 2026-04-09
 source: "MPM Cohort transcripts, Weeks 1-4; MPM session notes PDFs Weeks 1-7"
 tags: [teaching, methodology, rethink-systems, cohort, product-management]
 visibility: public
-updated: 2026-04-09
 ---
 
 > Mindset before method, stories before slides, behavioral change before intellectual change — how Shravan structures eight weeks that people say changed their next ten years.
